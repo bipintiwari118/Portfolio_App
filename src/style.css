@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#navbar{
+    box-shadow: 10px 10px 20px rgb(79, 77, 77);
+    background: linear-gradient(90deg, rgba(216,216,224,1) 0%, rgba(234,232,240,1) 35%, rgba(202,212,208,1) 100%);
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform .2s;
+}
+.card:hover{
+    transform: scale(1.05);
+}
