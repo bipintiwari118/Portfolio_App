@@ -11,10 +11,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
   <!-- 
     swiper link-- -->
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+  <!-- -------fancybox link----- -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+
+
 </head>
 
 <body class=" bg-gray-50">
@@ -208,7 +218,7 @@
 
     <section>
       <div class="m-[5px] rounded-sm">
-        <h1 class="text-center font-[650] text-[35px] p-[20px] text-blue-950  bg-gray-100 ">SPEECHES</h1>
+        <h1 class="text-center font-[650] text-[35px] p-[20px] text-blue-950  bg-gray-100 mt-[30px]">SPEECHES</h1>
 
         <div class="p-[20px] flex flex-col flex-wrap">
           <div class="h-auto w-max-[400px] w-full p-[20px] bg-white card mt-[40px]">
@@ -275,6 +285,14 @@
 -----Speeches section end--------- -->
 
 
+    <!-- --------Blog section start----- -->
+
+    <section>
+
+    </section>
+    <!-- --------Blog section end----- -->
+
+
 
 
     <!-- 
@@ -282,6 +300,29 @@
 
     <section>
 
+      <div class=" bg-[url('/background2.jpeg')] h-auto w-full  z-0 mt-[100px]">
+        <div class="bg-gray-950 h-auto p-[20px] w-full opacity-90 z-50  text-white flex justify-center">
+          <div class="flex gap-5 justify-center flex-row flex-wrap w-3/4 p-[20px]">
+            <h2 class="text-[18px] font-semibold">Gallery</h2>
+            <a href="/public/slider2.jpeg" data-fancybox="gallery" data-caption="gallery_1" class="h-auto w-auto">
+              <img src="/public/slider2.jpeg" />
+            </a>
+
+            <a href="/public/slider1.jpeg" data-fancybox="gallery" data-caption="gallery_2" class="h-auto w-auto">
+              <img src="/public/slider1.jpeg" />
+            </a>
+            <a href="/public/slider1.jpeg" data-fancybox="gallery" data-caption="gallery_2" class="h-auto w-auto">
+              <img src="/public/slider1.jpeg" />
+            </a>
+            <a href="/public/slider1.jpeg" data-fancybox="gallery" data-caption="gallery_2" class="h-auto w-auto">
+              <img src="/public/slider1.jpeg" />
+            </a>
+            <a href="/public/slider1.jpeg" data-fancybox="gallery" data-caption="gallery_2" class="h-auto w-auto">
+              <img src="/public/slider1.jpeg" />
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
 
@@ -338,9 +379,15 @@
 
 
   <!-- swiper js  -->
-
-
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+
+
   <script>
     const swiper = new Swiper('.swiper', {
       // Optional parameters
@@ -369,6 +416,18 @@
       //   el: '.swiper-scrollbar',
       // },
     });
+
+
+
+    // facnybox
+
+
+
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      //
+    });
+
+
   </script>
 </body>
 
