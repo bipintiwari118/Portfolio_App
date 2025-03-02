@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth focus:scroll-auto">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 
+    swiper link-- -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class=" bg-gray-50">
@@ -43,7 +47,26 @@
 
   <section>
     <div class="p-[10px]">
-      <img class="w-full h-auto" src="/public/hero.jpeg" alt="">
+      <!-- Slider main container -->
+      <div class="swiper h-[200px] w-full">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img class="w-full" src="/public/slider1.jpeg" alt=""></div>
+          <div class="swiper-slide"><img class="w-full" src="/public/slider2.jpeg" alt=""></div>
+          <div class="swiper-slide"><img class="w-full" src="/public/slider3.jpeg" alt=""></div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
     </div>
   </section>
 
@@ -285,7 +308,7 @@
   <footer>
     <div class="bg-[url('/background.png')] h-[200px] w-full mt-[100px] z-0">
       <div class="bg-gray-950 h-full w-full opacity-90 z-50  text-white flex flex-col">
-        <div class="flex gap-7 justify-evenly pt-[40px] flex-wrap mb-[50px] p-[30px] h-auto">
+        <div class="flex gap-7 justify-evenly pt-[40px] flex-wrap mb-[50px] p-[20px] h-auto">
           <div class=" font-[600]">
             <h2>About</h2>
           </div>
@@ -314,7 +337,39 @@
 
 
 
+  <!-- swiper js  -->
 
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      // direction: 'vertical',
+      loop: true,
+
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+    });
+  </script>
 </body>
 
 </html>
