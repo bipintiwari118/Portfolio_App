@@ -31,65 +31,105 @@
 
   <header>
 
-  <section>
-    <div class="bg-blue-400 flex justify-around h-[60px] items-center text-white font-bold text-[20px] w-full">
-      <p>Nepali Congress</p>
-      <p>+01 45626840</p>
-    </div>
-  </section>
-
-  <!-- navbar section start -->
-
-<nav>
-
-  <section id="navbar" class="sticky top-0">
-    <div class="flex justify-between h-[80px] items-center p-[20px] w-full  md:hidden">
-      <div class="text-[30px]">
-        <img src="/public/logo.png" alt="" class="h-[90px] w-[90px] ">
+    <section>
+      <div class="bg-blue-400 flex justify-around h-[60px] items-center text-white font-bold text-[20px] w-full">
+        <p>Nepali Congress</p>
+        <p>+01 45626840</p>
       </div>
+    </section>
 
-      <div class="text-[40px]">
-        <button><i class="fa-solid fa-bars"></i></button>
-      </div>
+    <!-- navbar section start -->
 
-    </div>
-  </section>
+    <nav>
+
+      <section id="navbar" class="sticky top-0">
+        <div class="flex flex-col">
+          <div class="flex justify-between h-[80px] items-center p-[20px] w-full  md:hidden">
+            <div class="text-[30px]">
+              <img src="/public/logo.png" alt="" class="h-[90px] w-[90px] ">
+            </div>
+
+            <div class="text-[40px]">
+              <button id="menu_btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+          </div>
+          <!-- mobile menu bar -->
+          <div class=" h-auto flex flex-row items-center w-full  flex-wrap md:hidden hidden" id="mbl_nav">
+            <ul class="flex flex-col gap-12 w-full  items-center text-[18px] text-black font-[600] p-[20px]">
+              <li class="nav_item"><a href=""
+                  class="group relative transition-all duration-600 hover:text-orange-600">Home
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <li class=""><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Speeches
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Blog
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Gallery
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">About
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <button class="mb-5">Podcast</button>
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
 
 
-  <section id="navbar" class="sticky top-0">
-    <div class="flex justify-evenly h-auto min-h-[80px] items-center  w-full flex-wrap">
-      <div class="">
-        <img src="/public/logo.png" alt="" class="h-[100px] w-[100px] ">
-      </div>
 
-      <div class=" h-full flex flex-row items-center w-1/2 justify-center flex-wrap">
-        <ul class="flex flex-row gap-12 w-full justify-end flex-wrap items-center text-[18px] text-black font-[600]">
-          <li class="nav_item"><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Home
-            <span class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
-          </a></li>
-          <li class=""><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Speeches
-            <span class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
-          </a></li>
-          <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Blog
-            <span class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
-          </a></li>
-          <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Gallery
-            <span class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
-          </a></li>
-          <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">About
-            <span class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
-          </a></li>
-          <button class="ml-6">Podcast</button>
-        </ul>
-        
-      </div>
 
-    </div>
-  </section>
 
-</nav>
 
-</header>
+      <section id="navbar" class="sticky top-0">
+        <div class="flex justify-evenly h-auto min-h-[80px] items-center flex-row  w-full  gap-7  max-md:hidden">
+          <div class="mr-3">
+            <img src="/public/logo.png" alt="" class="h-[100px] w-[100px] ">
+          </div>
+
+          <div class=" h-full flex flex-row items-center w-1/2 justify-center flex-wrap">
+            <ul class="flex flex-row gap-12 w-full justify-end  items-center text-[18px] text-black font-[600]">
+              <li class="nav_item"><a href=""
+                  class="group relative transition-all duration-600 hover:text-orange-600">Home
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <li class=""><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Speeches
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Blog
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">Gallery
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <li><a href="" class="group relative transition-all duration-600 hover:text-orange-600">About
+                  <span
+                    class="absolute left-0 bottom-[-8px] w-0 h-[2px] bg-green-600 transition-all duration-700 ease-in-out group-hover:w-full "></span>
+                </a></li>
+              <button class="ml-6">Podcast</button>
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+    </nav>
+
+  </header>
 
   <!-- ----------hero section start---- -->
 
@@ -517,6 +557,11 @@
       $('.counter').counterUp({
         delay: 10,
         time: 1000
+      });
+
+
+      $("#menu_btn").click(function () {
+        $('#mbl_nav').slideToggle('slow');
       });
     });
 
