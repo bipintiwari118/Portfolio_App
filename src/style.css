@@ -35,3 +35,13 @@
     transform: scale(1.25);
     overflow: hidden;
 }
+
+.logo{
+    transition: all;
+    transition: transform .2s;
+}
+
+.logo:hover{
+    transform: scale(1.15);
+    
+}
