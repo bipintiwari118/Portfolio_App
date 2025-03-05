@@ -46,6 +46,10 @@
     
 }
 
+.section{
+    background: rgb(102,172,150);
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     width: 60px;
