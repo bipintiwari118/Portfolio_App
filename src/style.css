@@ -39,6 +39,16 @@
     
 }
 
+.section1{
+    background: linear-gradient(90deg, rgba(166,174,208,1) 11%, rgba(126,181,137,1) 46%, rgba(183,190,99,1) 82%);
+}
+
+.section2{
+    background: linear-gradient(90deg, rgba(133,80,86,1) 11%, rgba(63,86,115,1) 46%, rgba(148,118,154,1) 82%);
+}
+.section3{
+    background: linear-gradient(90deg, rgba(114,125,233,1) 31%, rgba(128,139,196,1) 67%);
+}
 .section{
     background: linear-gradient(90deg, rgba(108,110,107,1) 8%, rgba(9,10,8,1) 36%, rgba(96,99,98,1) 76%);
 }
