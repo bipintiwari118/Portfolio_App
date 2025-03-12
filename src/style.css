@@ -16,13 +16,6 @@
     overflow: hidden;
 }
 
-.blog{
-    background: linear-gradient(90deg, rgba(164,164,208,1) 0%, rgba(185,184,187,1) 35%, rgba(156,203,184,1) 100%);
-}
-
-.speech{
-    background: linear-gradient(90deg, rgba(159,159,168,1) 0%, rgba(169,162,185,1) 35%, rgba(176,181,178,1) 100%);
-}
 
 .social{
     background: linear-gradient(90deg, rgba(179,209,212,1) 0%, rgba(207,200,213,1) 35%, rgba(159,170,163,1) 100%);
