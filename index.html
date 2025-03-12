@@ -151,13 +151,27 @@
   <section>
     <div class="">
       <!-- Slider main container -->
-      <div class="swiper md:w-full w-full md:h-[500px] md:overflow-hidden">
+      <div class="swiper w-full h-auto lg:h-[600px] overflow-hidden">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide "><img class="w-full h-full md:w-full md:object-cover md:overflow-hidden" src="/public/slider1.avif" alt=""></div>
-          <div class="swiper-slide "><img class=" w-full h-full md:w-full md:object-cover md:overflow-hidden" src="/public/slider2.avif" alt=""></div>
-          <div class="swiper-slide "><img class="w-full h-full md:w-full md:object-cover md:overflow-hidden" src="/public/slider3.avif" alt=""></div>
+          <div class="swiper-slide"><img class="w-full h-auto  object-contain z-0" src="/public/slider1.avif" alt="">  <h1 class="z-10 absolute top-[100px] left-[400px]">
+            <a href="" class="typewrite text-[45px] font-serif font-[600]" data-period="2000" data-type='[ "Hi, Im Bipin.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+              <span class="wrap"></span>
+            </a>
+          </h1></div>
+          <div class="swiper-slide "><img class="w-full h-auto   object-contain" src="/public/slider2.avif" alt="">
+            <h1 class="z-10 absolute  top-[100px] left-[400px]">
+              <a href="" class="typewrite text-[45px] font-serif font-[600]" data-period="2000" data-type='[ "Hi, Im Bipin.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+                <span class="wrap"></span>
+              </a>
+            </h1></div>
+          <div class="swiper-slide "><img class="w-full h-auto   object-contain" src="/public/slider3.avif" alt="">
+            <h1 class="z-10  absolute top-[100px] left-[400px]">
+              <a href="" class="typewrite text-[45px] font-serif font-[600]" data-period="2000" data-type='[ "Hi, Im Bipin.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+                <span class="wrap"></span>
+              </a>
+            </h1></div>
 
         </div>
         <!-- If we need pagination -->
@@ -695,6 +709,72 @@
 
 
   <script>
+
+    // typewriter effect start
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000000}";
+        document.body.appendChild(css);
+    };
+
+
+    //typewriter effect end 
+
+
+
+
+
 
     AOS.init();
 
